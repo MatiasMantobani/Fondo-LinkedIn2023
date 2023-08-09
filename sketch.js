@@ -10,7 +10,7 @@ EL PUSH VA PRIMERO Y LUEGO EL NEW BOL, si lo haces al revez el primer elemento d
 // }
 
 let bols = [];
-let texto = "Linked In 2022"
+let texto = "Linked In 2023"
 let cantidad = 50;
 let cantidadMaxima = 400;
 
@@ -26,18 +26,20 @@ function mousePressed() {
 }
 
 function draw() {
+
+  if (mouseIsPressed === true) {
+    if (mouseButton === RIGHT) {
+      print('si')
+      bols = []
+    }
+  }
   
   // limitar cant de bolas totales
 if(bols.length > cantidadMaxima){
 bols.splice(0,cantidad)
 }
   
-  background(0);
-  rectMode(CENTER);
-  stroke(255);
-  noFill();
-  rect(770, 570, 50, 50);
-  
+  background(0,119,181);
 
   fill(255);
   noStroke();
@@ -47,7 +49,6 @@ bols.splice(0,cantidad)
   // textFont(myFont); //forma 2
   textFont("Rubik Moonrocks"); //forma 1
   
-  text("Restart?",765,540);
   
   strokeWeight(1)
     textSize(48)
@@ -70,9 +71,11 @@ class BOL {
     this.r = 25;
     this.speedx = random(-3, 3);
     this.speedy = random(-3, 3);
-    this.cl = random(["cyan", "red", "pink", "blue", "yellow", "green", "purple", "orange", "coral", "indigo", "white"])
-    this.cl = "white"
-    this.cl = random(["white","black"])
+    //this.cl = random(["cyan", "red", "pink", "blue", "yellow", "green", "purple", "orange", "coral", "indigo", "white"])
+    //this.cl = "white"
+    // this.cl = random(["white","black"])
+    this.cl = "black"
+    
   }
 
   show() {
