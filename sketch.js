@@ -69,6 +69,7 @@ class BOL {
     this.x = x;
     this.y = y;
     this.r = 25;
+    // this.speedx = random(0);
     this.speedx = random(-3, 3);
     this.speedy = random(-3, 3);
     //this.cl = random(["cyan", "red", "pink", "blue", "yellow", "green", "purple", "orange", "coral", "indigo", "white"])
